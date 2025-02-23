@@ -1,0 +1,130 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    
+    font-size: 62.5%; /* 1rem = 10px */
+}
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    font-family: 'roboto';
+
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    height: 100vh;
+
+  }
+
+  .header{
+    background-color: aliceblue;
+  }
+
+  .sidebar{
+    background-color: #1992D4;
+    grid-row: 1 / 3;
+    padding: 1rem;
+    
+  }
+
+  nav{
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 30px;
+
+  }
+
+  .menu a {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  
+  .menu a i{
+    font-size: 4rem;
+    color: #fff;
+    
+  }
+
+  .menu a span {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .menu-general, .menu-settings {
+    display: grid;
+
+  }
+  .menu-general a, .menu-settings a {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2rem;
+    text-decoration: none;
+    margin-left: 1rem;
+    padding: 5px 0;
+  }
+  .menu-general a i, .menu-settings a i {
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  .menu-general a span, .menu-settings a span{
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .content{
+    background-color: #ccc;
+  }
